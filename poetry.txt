@@ -1,0 +1,18 @@
+pip install poetry
+
+poetry init
+
+blank
+blank
+description: description
+blank
+blank
+blank
+
+dependencies: pytest 0, factory-boy 0
+
+
+
+poetry add django
+
+poetry run django-admin startproject bookstore .
