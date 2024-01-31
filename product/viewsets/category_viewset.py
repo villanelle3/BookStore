@@ -9,4 +9,4 @@ class CategoryViewSet(ModelViewSet):
     # queryset = Product.objects.all()
 
     def get_queryset(self):
-        return Category.objects.all()
+        return Category.objects.all().order_by("id")
