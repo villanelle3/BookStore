@@ -1,0 +1,21 @@
+To use docker command from Mac's zsh terminal, go to file:
+
+Path:
+
+Macintosh HD/Users/user/.zprofile
+
+
+add:
+
+# Add Visual Studio Code (code)
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+# Add Docker Desktop for Mac (docker)
+export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
+
+
+to build docker image:
+docker build -t bookstore:latest .
+
+to run docker container:
+docker run --name bookstore -d -p 8000:8000 bookstore:latest
