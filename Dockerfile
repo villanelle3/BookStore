@@ -44,14 +44,20 @@ RUN apt-get update \
 # install poetry - respects $POETRY_VERSION & POETRY_HOME
 RUN pip install poetry
 
+
+# install postgres dependencies
+RUN apt-get update \
+  && apt-get -y install libpq-dev gcc \
+  && pip install psycopg2
+
 # copy project requirement files here to ensure they will be cached
 WORKDIR $PYSETUP_PATH
 COPY poetry.lock pyproject.toml ./
 
-# copy in our built poetry + venv
-# COPY --from=builder-base $POETRY_HOME $POETRY_HOME
-# COPY --from=builder-base $PYSETUP_PATH $PYSETUP_PATH
+
+# install project requirements
 RUN poetry install --no-root
+
 
 WORKDIR /app
 COPY . /app/

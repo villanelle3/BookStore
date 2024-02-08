@@ -18,5 +18,9 @@ def main():
     execute_from_command_line(sys.argv)
 
 
+# docker build -t bookstore:latest .
+# docker ps
+# docker run --name bookstore -d -p 8000:8000 bookstore:latest
+
 if __name__ == "__main__":
     main()
