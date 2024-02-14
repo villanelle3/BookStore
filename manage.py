@@ -21,6 +21,7 @@ def main():
 # docker build -t bookstore:latest .
 # docker ps
 # docker run --name bookstore -d -p 8000:8000 bookstore:latest
+# docker network create --driver bridge alpine-net
 
 if __name__ == "__main__":
     main()
