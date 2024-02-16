@@ -27,5 +27,6 @@ services:
 networks:
   backend:
     driver: bridge
+    
 volumes:
   postgres_data:
