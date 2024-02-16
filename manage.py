@@ -17,7 +17,9 @@ def main():
         ) from exc
     execute_from_command_line(sys.argv)
 
-
+# alpin21
+# alpine1
+# alpine 3
 # docker build -t bookstore:latest .
 # docker ps
 # docker run --name bookstore -d -p 8000:8000 bookstore:latest
